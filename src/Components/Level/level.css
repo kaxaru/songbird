@@ -1,0 +1,12 @@
+.stackable.menu .item {
+    width: 16.68%;
+    display: block !important;
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 700 !important;
+    background-color: darkgreen !important;
+    color: white !important;
+}
+
+

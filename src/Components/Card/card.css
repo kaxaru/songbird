@@ -1,0 +1,13 @@
+.content .header {
+    width: 100%;
+    text-align: center;
+}
+
+.content .meta {
+    height: 4em;
+}
+
+.content .meta .audio-player {
+    margin-left: 20%;
+    line-height: 3em;
+}

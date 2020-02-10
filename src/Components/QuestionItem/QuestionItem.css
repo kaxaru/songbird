@@ -1,0 +1,7 @@
+.vertical.menu {
+    width: 100% !important;
+}
+
+.vertical.menu .item{
+    text-align: center;
+}
