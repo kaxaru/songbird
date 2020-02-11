@@ -10,8 +10,18 @@ let playlist = [
       artist: "Another Singer" }
 ];
 
-const AudioPlayer = () => (
-    <Player audioFiles={playlist} />
-)
+const AudioPlayer = (props) => {
+  let { curBird , stage } = props
+  let audio = []
+  audio.push({
+    src: curBird.audio,
+    title: 'unknown bird',
+    artist: `stage ${stage}`
+  })
+
+  return (
+    <Player audioFiles={audio} />
+)}
+
 
 export default AudioPlayer

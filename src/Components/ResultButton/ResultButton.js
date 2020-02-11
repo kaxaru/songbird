@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
 
-const ResultBtn = () => <Button fluid className='resultBtn green'>Next Level</Button>
+export default class ResultBtn extends Component {
 
-export default ResultBtn
+btnClick = (e) => {
+    this.props.isNextStage(this.props.isRightAnswer)
+}
+
+render() {
+    return (<Button fluid className='resultBtn green' disabled={(this.props.isRightAnswer) ? false : true} onClick={this.btnClick} >Next Level</Button>)
+}}
+

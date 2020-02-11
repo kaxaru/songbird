@@ -1,28 +1,35 @@
-import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Menu, Icon } from 'semantic-ui-react'
 import './QuestionItem.css'
 
-const QuestionItem = () => (
-    <Menu inverted vertical>
-        <Menu.Item
-        name='orel'
-        />
-        <Menu.Item
-        name='orel'
-        />
-        <Menu.Item
-        name='orel'
-        />
-        <Menu.Item
-        name='orel'
-        />
-        <Menu.Item
-        name='orel'
-        />
-        <Menu.Item
-        name='orel'
-        />
-  </Menu>
-)
+export default class QuestionItem extends Component {
+    state = { 
+        activeItem: null,
+        id: null
+    }
 
-export default QuestionItem
+    itemClick = (e, { id, name }) => {
+       this.setState({ activeItem: name, id: id}, () => {
+           const check = this.props.checkAnswer(this.state.id)   
+           console.log(check, "click")
+       })   
+    } 
+
+    item = () => {
+        const { activeItem } = this.state
+        const { store, stage } = this.props
+        return store[stage].map((el) => {
+            return (
+                <Menu.Item id={el.id} name={el.name} active={activeItem === el.name} onClick={this.itemClick} ><Icon name='eye' />{el.name}</Menu.Item>
+            )
+        })
+    }
+
+    render() {
+        return (
+            <Menu inverted vertical>
+                {this.item()}
+            </Menu>
+        )
+    }
+}

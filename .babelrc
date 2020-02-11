@@ -6,6 +6,6 @@
             "useBuiltIns" : "usage" 
         }
     ],
-        "@babel/react"]
-
+        "@babel/react"],
+    "plugins": ["@babel/proposal-class-properties"]
 }
