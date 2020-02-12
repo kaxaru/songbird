@@ -9,18 +9,29 @@ export default class QuestionItem extends Component {
     }
 
     itemClick = (e, { id, name }) => {
-       this.setState({ activeItem: name, id: id}, () => {
+       const check = this.props.checkAnswer(id) 
+       console.log(check, "Target")
+       let el = e.currentTarget.children[0]
+       if(el.classList.contains('eye')) {
+           el.classList.remove('eye')
+           if (check) 
+                el.classList.add('calendar', 'check')
+            else
+                el.classList.add('calendar', 'times')
+       }
+       this.setState({ activeItem: name, id: id}, /*() => {
            const check = this.props.checkAnswer(this.state.id)   
            console.log(check, "click")
-       })   
+       }*/)   
     } 
 
     item = () => {
         const { activeItem } = this.state
-        const { store, stage } = this.props
+        let { store, stage } = this.props
+        console.log(`currant stage ${stage}`)
         return store[stage].map((el) => {
             return (
-                <Menu.Item id={el.id} name={el.name} active={activeItem === el.name} onClick={this.itemClick} ><Icon name='eye' />{el.name}</Menu.Item>
+                <Menu.Item key={el.id * (++stage)} id={el.id} name={el.name} active={activeItem === el.name} onClick={this.itemClick} ><Icon name='eye' />{el.name}</Menu.Item>
             )
         })
     }

@@ -12,9 +12,11 @@ let playlist = [
 
 const AudioPlayer = (props) => {
   let { curBird , stage } = props
-  let audio = []
+  let audio = []; 
+  let src = () => curBird === undefined ? 'unknown' : curBird.audio
+
   audio.push({
-    src: curBird.audio,
+    src: src(),
     title: 'unknown bird',
     artist: `stage ${stage}`
   })

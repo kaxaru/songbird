@@ -9,4 +9,7 @@
     color: white !important;
 }
 
+.stackable.menu .active{
+    background-color: red !important;
+}
 

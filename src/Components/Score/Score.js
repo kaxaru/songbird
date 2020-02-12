@@ -1,10 +1,10 @@
 import React from 'react'
 import { Header, Icon } from 'semantic-ui-react'
 
-const Score = () => (
+const Score = ({score}) => (
     <Header as='h2' className='score'>
         <Icon name='angle double right' />
-        <Header.Content>Score: 0</Header.Content>
+<Header.Content>Score: {score}</Header.Content>
     </Header>
     );
 
