@@ -5,3 +5,12 @@
 .vertical.menu .item{
     text-align: center;
 }
+
+.calendar.times {
+    color: tomato
+}
+
+.calendar.check {
+    color: green
+}
+

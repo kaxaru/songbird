@@ -8,6 +8,6 @@ btnClick = (e) => {
 }
 
 render() {
-    return (<Button fluid className='resultBtn green' disabled={(this.props.isRightAnswer) ? false : true} onClick={this.btnClick} >Next Level</Button>)
+    return (<Button fluid className='resultBtn green' disabled={(this.props.isRightAnswer) ? false : true} onClick={this.btnClick} >Следующий уровень</Button>)
 }}
 

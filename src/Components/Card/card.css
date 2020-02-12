@@ -4,10 +4,17 @@
 }
 
 .content .meta {
-    height: 4em;
+    height: 2em;
+    text-align: center;
+    font-size: 1.1em !important;
 }
 
 .content .meta .audio-player {
     margin-left: 20%;
     line-height: 3em;
 }
+
+.item .image {
+    width: 200px !important;
+}
+
