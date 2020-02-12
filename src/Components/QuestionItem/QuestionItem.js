@@ -10,8 +10,11 @@ export default class QuestionItem extends Component {
 
     itemClick = (e, { id, name }) => {
        const check = this.props.checkAnswer(id) 
+       console.log("===========")
+       console.log(this.props)
+       console.log("===========")
        let el = e.currentTarget.children[0]
-       if(el.classList.contains('eye')) {
+       if(el.classList.contains('eye') && !this.props.immutable) {
            el.classList.remove('eye')
            if (check) 
                 el.classList.add('calendar', 'check')

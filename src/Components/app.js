@@ -94,7 +94,7 @@ export default class App extends Component {
             }))  
         }
 
-        if (check) {
+        if (check && !this.state.option.isAnswered) {
             let score = user.stageEls.length - 1 + user.score;
             this.setState(prevState => ({
                 option: {

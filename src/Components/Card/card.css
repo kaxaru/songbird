@@ -10,8 +10,12 @@
 }
 
 .content .meta .audio-player {
-    margin-left: 20%;
+    //font-size: 1.2em !important;
     line-height: 3em;
+}
+
+.audio-player .slide-container {
+    width:3em;
 }
 
 .item .image {

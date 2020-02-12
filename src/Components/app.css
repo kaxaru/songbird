@@ -23,3 +23,21 @@ header {
 .two.column {
     min-height: 400px;
 }
+
+
+@media only screen and (max-width: 1050px) {
+    .ui.grid>[class*="two column"].row>.column {
+        width: 100% !important;
+        padding: 1em
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .one.column .items {
+        width: 80%
+    }
+
+    .resultBtn {
+        margin-bottom: 30px !important
+    }
+}

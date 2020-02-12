@@ -24,7 +24,7 @@ const Card = (props) => {
             <Item.Content>
             <Item.Header>{!option.isAnswered ? '********' : store[option.stage][option.answer].name}</Item.Header>
             {(!option.isAnswered) ? null : <Divider /> }
-                <Item.Meta><AudioPlayer curBird={curBird} stage={option.stage} /></Item.Meta>
+                <Item.Meta><AudioPlayer className="abc meta" curBird={curBird} stage={option.stage} /></Item.Meta>
             </Item.Content>
             </Item>
             )             
@@ -47,7 +47,7 @@ const Card = (props) => {
                 <Divider />
                 <Item.Meta>{store[option.stage][user.id - 1].species}</Item.Meta>
                 <Divider />
-                <Item.Meta><AudioPlayer curBird={store[option.stage][user.id - 1]} stage={option.stage} /></Item.Meta>
+                <Item.Meta><AudioPlayer className="meta" curBird={store[option.stage][user.id - 1]} stage={option.stage} /></Item.Meta>
                 <Item.Description>
                     {store[option.stage][user.id - 1].description}
                 </Item.Description>
